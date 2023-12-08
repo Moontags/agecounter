@@ -1,10 +1,13 @@
-* {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 body{
     background: linear-gradient(to bottom, rgb(45, 60, 63), rgb(215, 209, 209), 55%, rgb(57, 61, 62));
     min-height: 100vh;
     font-family: sans-serif;
+    max-width: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -14,7 +17,7 @@ body{
 
 
      min-height: 100px;
-     width: 520px;
+     width: 500px;
      margin: auto;
      height: 90%;
 
