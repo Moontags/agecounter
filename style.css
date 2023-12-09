@@ -2,25 +2,31 @@
 *::before,
 *::after {
     box-sizing: border-box;
+   
+    
 }
-body{
+
+html {
+    height: 100% ;
+}
+    
+body {
     background: linear-gradient(to bottom, rgb(45, 60, 63), rgb(215, 209, 209), 55%, rgb(57, 61, 62));
-    min-height: 100vh;
     font-family: sans-serif;
-    max-width: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
-}
+    height: 100vh;
+   
+    
+}   
 
 .container {
 
 
-     min-height: 100px;
-     width: 500px;
-     margin: auto;
-     height: 90%;
-
+     overflow: hidden;
+    
+    
 }
 
 .base {
@@ -30,19 +36,20 @@ body{
     overflow: hidden;
     display: block;
     float: none;
+    padding: 2rem;
 
 }
 
 .base h4 {
 
-    font-size: 62px;
+    font-size: 48px;
     text-align: center;
     text-shadow: 0px 2px 2px #000000;
     font-family: sans-serif;
     margin-top: 2rem;
     font-weight: normal;
     color: rgb(202, 202, 213);
-    padding: 10px;
+    padding: 2px;
     border: 1px solid;
     border-bottom-style: none;
     border-top-left-radius: 6px;
@@ -51,14 +58,23 @@ body{
     border-bottom-right-radius: 6px;
     border-style: none;
 
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+    
 
 }
 
-.block{
+.block {
 
-    width: 135px;
-    padding: 5px 10px;
-    margin-left: 18px;
+    flex: 1;
+    width: 100%;
+    padding: 2px 34%;
     display: inline-block;
     float: none;
 
@@ -66,15 +82,12 @@ body{
 
 .title {
 
-    font-size: 42px;
+    font-size: 34px;
     font-family: sans-serif;
     font-weight: normal;
     letter-spacing: 1px;
-    color: #101011;
+    color: #101011;;
     word-spacing: 2.7px;
-    border: 1px solid;
-    border-style: none;
-    border-radius: 6px;
     text-align: center;
     text-shadow: 0px 1px 1px #000000;
     
@@ -88,39 +101,43 @@ input::placeholder {
 
 
 
-input[type=text]{
+input[type=text] {
     
-    width: 140px;
-    margin: auto;
+    display: flex;
+    width: 100%;
     outline: none;
-    min-height: 32px;
     border: 2px solid ;
     border-radius: 6px;
     border-style: none;
-    font-size: 28px;
-    padding: 12px;
+    font-size: 24px;
+    padding: 11px;
     text-align: center;
-    background: linear-gradient(to left, rgb(45, 60, 63), rgb(206, 194, 194), rgb(57, 61, 62));;
+    background: linear-gradient(to bottom, rgb(230, 230, 230), rgb(100, 100, 100), rgb(160, 160, 160));;
 }
 
 input[type=text]:focus{
-    background: #7d7878;
-    border: 2px solid;
-    border-radius: 2rem;
+    background: #dcf5c4;
+    border: 2px solid none;
+    border-radius: 0.5rem;
    
 }
 
 input[type=button]{
-    width: 150px;
-    margin-left: 35%;
-    margin-top: 78px;
+   
+    margin-top: 40px;
     outline: none;
     border: none;
-    border-radius: 6px;
+    border-radius: 1rem;
     background: linear-gradient(to left, rgb(45, 60, 63), rgb(166, 155, 155), rgb(57, 61, 62));
-    padding: 14px 16px;
+    padding: 12px 14px;
     color: white;
     font-size: 26px;
+     margin: auto;
+    display: flex;  
+    justify-content: center;  
+    align-items: center;   
+    
+    
 }
 
 input[type=button]:hover{
@@ -130,15 +147,17 @@ input[type=button]:hover{
 
 }
 
+
+
+
 .calculateAge {
-   display: flex;
-   align-items: center;
+   
    margin: 10px;
    margin-top: 3rem;
    padding-bottom: 20px;
    overflow: hidden;
    font-family: Arial, Helvetica, sans-serif;
-   font-size: 44px;
+   font-size: 48px;
    font-weight: normal;
    line-height: 1.5;
    word-spacing: 2.7px;
@@ -147,4 +166,60 @@ input[type=button]:hover{
    padding: 10px;
    text-align: center;
    
+   
 }
+
+/* /* @media only screen and (min-width: 480px) {
+    body {
+
+      padding: 1rem 3rem;
+      display: flex;
+      align-items: flex-end;
+      height: 100vh;
+    }
+    
+    .container {
+        margin: 0 auto;
+        width: 480px; 
+        
+     }
+     .calculateAge {
+       display: inline;
+       height: fit-content;
+     } 
+  } */
+
+  @media only screen and (max-width: 480px) {
+    body {
+      padding: 0;
+      display: block;
+    }
+  
+    .container {
+      width: 100%;
+      margin: 0;
+      overflow: hidden;
+    }
+  
+    .input-container {
+      margin: 0 5px; 
+      overflow: hidden;
+    }
+  
+    /* input[type=button] {
+        display: flex;
+        margin: 0 auto;
+    } */
+    .calculateAge {
+      display: block; 
+      margin-top: 1rem; 
+    }
+  
+    .base h4,
+    .title,
+    input[type=text],
+    .calculateAge {
+      font-size: 80%;  
+      text-align: center;
+    }
+  }
